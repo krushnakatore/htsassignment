@@ -17,6 +17,12 @@ app.use(express.json());
 
 app.use("/api/v1/user", userRoutes);
 
+app.get("/", (req, res) => {
+  res.send({
+    msg: "Welcome and Please open postman to play the url",
+  });
+});
+
 //port
 const PORT = process.env.PORT || 9000;
 
